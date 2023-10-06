@@ -2,7 +2,7 @@ echo 'CREATE AND POPULATE DATABASE TABLE(S)'
 echo '-------------------------------------'
 
 echo 'Waiting for pod to be available...'
-Sleep 15
+sleep 20
 
 echo 'Getting pod name...'
 export PODNAME=$(oc get pods -o custom-columns=POD:.metadata.name --no-headers | grep -v 'deploy$' | grep customersdb)

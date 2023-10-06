@@ -3,7 +3,7 @@ echo 'CREATE AND POPULATE DATABASE TABLE(S)'
 echo '-------------------------------------'
 
 echo 'Waiting for pod to be available...'
-Sleep(15)
+Sleep(20)
 
 echo 'Getting pod name...'
 (kubectl get pods | select-string '^customersdb([^\s]+)-(?!deploy)') -match 'customersdb([^\s]+)'; $podname = $matches[0]
