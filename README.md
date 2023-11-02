@@ -1,3 +1,6 @@
+## Part of the Red Hat Developer learning path entitled "Using Red Hat OpenShift labels"
+
+
 `oc new-app --template=postgresql-ephemeral --param NAMESPACE=openshift --param DATABASE_SERVICE_NAME=customersdb --param POSTGRESQL_USER=customersdb --param POSTGRESQL_PASSWORD=customersdb --param POSTGRESQL_DATABASE=customersdb --labels=app.kubernetes.io/part-of=customers,systemname=customers,tier=database,database=postgresql,customers=database`
 
 `(kubectl get pods | select-string '^customersdb([^\s]+)-(?!deploy)') -match 'customersdb([^\s]+)'; $podname = $matches[0]`
